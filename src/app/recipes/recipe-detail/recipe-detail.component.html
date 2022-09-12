@@ -1,0 +1,38 @@
+<div class="grid">
+  <div class="col-offset-1 col-11">
+    <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-responsive" style="max-height: 300px">
+  </div>
+</div>
+<div class="grid">
+  <div class="col-offset-1 col-11">
+    <h1>{{ recipe.name }}</h1>
+  </div>
+</div>
+<div class="grid">
+  <div class="col-offset-1 col-11">
+    <div class="dropdown">
+      <button class="dropbtn">Manage Recipe<i class="pi pi-angle-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a (click)="toShoppingList()">To Shopping List</a>
+        <a (click)="editRecipe()">Edit Recipe</a>
+        <a (click)="deleteRecipe()">Delete Recipe</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="grid">
+  <div class="col-offset-1 col-11">
+    {{ recipe.description }}
+  </div>
+</div>
+<div class="grid">
+  <div class="col-offset-1 col-11">
+    <ul class="card">
+      <li class="item-card border" *ngFor="let ingredient of recipe.ingredients">
+        {{ ingredient.name }} - {{ ingredient.amount }}
+      </li>
+    </ul>
+  </div>
+</div>

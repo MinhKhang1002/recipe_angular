@@ -1,0 +1,23 @@
+a {
+  text-decoration: none;
+}
+.border {
+  /* padding: 5px; */
+  border: 1px solid #333;
+}
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 5px #888888;
+  height: 80px;
+}
+.content {
+  margin: 10px 0px 0px 5px;
+}
+.active {
+  background: #2067d2;
+  color: #fff;
+}

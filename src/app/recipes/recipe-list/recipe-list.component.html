@@ -1,0 +1,10 @@
+<div class="grid mt-1">
+
+</div>
+<hr>
+<div class="grid mt-1">
+  <div class=" col-12">
+    <app-recipe-item *ngFor="let recipeItem of recipes; let i =index" [recipe]="recipeItem" [index]="i">
+    </app-recipe-item>
+  </div>
+</div>

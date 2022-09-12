@@ -1,0 +1,7 @@
+::ng-deep .p-menuitem-link-active {
+  background-color: #fed201 !important;
+}
+
+.p-menuitem-link-active {
+  background-color: #fed201 !important;
+}

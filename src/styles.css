@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container1 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.p-menuitem-link-active {
+  background: #2edc82;
+  color: #fff !important;
+}

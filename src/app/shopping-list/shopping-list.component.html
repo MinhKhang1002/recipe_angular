@@ -1,0 +1,30 @@
+<div class="grid">
+  <div class="col-10 mt-5">
+    <form class="grid" [formGroup]="ingredientForm" (ngSubmit)="onSubmit()">
+      <div class="input-control col-8">
+        <label for="name">Name</label>
+        <input type="text" pInputText class="w-full" formControlName="name">
+      </div>
+
+      <div class="input-control col-4">
+        <label for="amount">Amount</label>
+        <input type="number" pInputText class="w-full" formControlName="amount">
+      </div>
+
+      <div class="col-12">
+        <button pButton class="p-button-success" type="submit" [disabled]="!ingredientForm.valid">{{ isEdit ? 'Update' :
+          'Add' }} </button>
+        <button pButton class="p-button-danger" type="button" (click)="Delete()" *ngIf="isEdit">Delete</button>
+        <button pButton class="p-button-primary" type="reset">Clear</button>
+      </div>
+
+    </form>
+
+    <ul class="card">
+      <li class="item-card" *ngFor="let ingredient of ingredients; let i = index" (click)="editItem(i)">
+        {{ ingredient.name }} ({{ ingredient.amount }})
+
+      </li>
+    </ul>
+  </div>
+</div>

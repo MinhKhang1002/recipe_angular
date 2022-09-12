@@ -1,0 +1,12 @@
+<a style="cursor: pointer;" [routerLink]="[index]" routerLinkActive="active" class="">
+  <div class="w-full wrap border" routerLinkActive="active">
+    <div class="content">
+      <h3>{{recipe.name}}
+      </h3>
+      <p>
+        {{recipe.description}}
+      </p>
+    </div>
+    <img [src]="recipe.imagePath" alt="" width="100px" height="70px" class="mr-3" />
+  </div>
+</a>
